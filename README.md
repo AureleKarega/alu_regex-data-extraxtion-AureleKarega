@@ -1,53 +1,49 @@
-Code Summary: Regex Data Validation in Python
-This Python script demonstrates how to use regular expressions (regex) to validate four types of commonly encountered data: emails, URLs, phone numbers, and currency amounts.
+Code Overview
 
- What It Does
-The script defines four functions using the re (regex) module:
+ Regex Based Data Validation In Python:  
 
-is_valid_email(email)
+This python program presents regular expression (regex) validation of data types such as emails, URLs, phone numbers, and currency values that are commonly encountered.  
 
-Checks if the given string is in a valid email format.
+What It Does:  
 
-Example of valid input: user@example.com
+The script uses re (regex) module to define four functions:  
 
-is_valid_url(url)
+def is_valid_email(email)  
 
-Validates URLs starting with http:// or https://.
+Validates if email is in proper format  
 
-Example of valid input: https://www.example.com
+Example of valid input: user@example.com  
 
-is_valid_phone(phone)
+def is_valid_url(url)  
 
-Accepts US-style phone numbers in different formats:
+Checks validity for URLs starting with http:// or https://.  
 
-(123) 456-7890
+Example of valid input: https://www.example.com  
 
-123-456-7890
+def is_valid_phone(phone)  
 
-123.456.7890
+Validates (US) phone numbers in the following formats:  
 
-is_valid_currency(amount)
+(123) 456-7890  
+123-456-7890  
+123.456.7890  
+  
+def is_valid_currency(amount)  
 
-Validates US currency formats like:
+Checks validity for US currency formats such as:  
 
-$19.99
+$19.99  
+$1,234.56  
+  
+Test Data:
+The input data for each type (email, URL, phone number, currency) is stored in a dictionary named test_data which is used to mimic real life scenarios. Each value is tested using the corresponding validation functions.  
 
-$1,234.56
+Output: 
+The script checks all test inputs for validity and returns the result. For example:  
 
- Test Data
-A dictionary named test_data is used to simulate real-world input data for each type (email, URL, phone number, currency). Each value is tested using the corresponding validation function.
+pgsql Copy Edit Email 'user@example.com' is valid? True Phone '123.456.7890' is valid? True Currency '$123456.78' is valid? False 
 
- Output
-The script prints whether each test input is valid. For example:
-
-pgsql
-Copy
-Edit
-Email 'user@example.com' is valid? True
-Phone '123.456.7890' is valid? True
-Currency '$123456.78' is valid? False
-
- How It Works
-Each function uses a regular expression pattern and Python’s re.match() to determine if the input fits the expected format.
+How It Works:
+ Each function employs a regular expression patter and uses python's re.match() to execute the function.
 
 
